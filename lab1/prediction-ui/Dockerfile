@@ -1,5 +1,5 @@
-# Using python 3.10 slim image as the base image
-FROM python:3.10.7-slim
+# Using python 3.12.7 slim image as the base image
+FROM python:3.12.7-slim
 # Defining working directory (within the container) and copy the requirements file. We will run the commands inside this new directory
 WORKDIR /usr/src/myapp
 # Copy requirements.txt  to the working directory
@@ -10,8 +10,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 # Expose the port that our app runs in
 EXPOSE 5000
-# Enviroment Variables
-ENV PREDICTOR_API=http://predictor-api-server:5000/diabetes_predictor
+# Environment Variables
+ENV PREDICTOR_API=http://predictor-api-server:5000/diabetes_predictor/
 #Add some meta data if necessary
 LABEL diabetes.predictor.api="0.0.1-beta"
 # Run our App
