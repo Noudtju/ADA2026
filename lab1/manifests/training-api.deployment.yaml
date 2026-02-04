@@ -27,5 +27,5 @@ spec:
           value: ada2026-486412  # use your project id
         - name: MODEL_REPO
           value: adamodels # use your GCP bucket id
-        - name: adamodels_nvs
+        - name: adamodel_nvs
           value: model.keras
